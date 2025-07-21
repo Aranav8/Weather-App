@@ -1,97 +1,137 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# 🌤️ Weather Now - A React Native Weather App
 
-# Getting Started
+![React Native](https://img.shields.io/badge/react_native-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![TypeScript](https://img.shields.io/badge/typescript-%233178C6.svg?style=for-the-badge&logo=typescript&logoColor=white)
+![OpenWeather](https://img.shields.io/badge/OpenWeather-FF6E01?style=for-the-badge&logo=openweathermap&logoColor=white)
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+A sleek and modern **React Native Weather App** that displays real-time weather data with a clean, intuitive, and beautifully designed UI. Built with a focus on performance and aesthetics using **TypeScript**, and the **OpenWeather API**.
 
-## Step 1: Start Metro
+---
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+## ✨ Features
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+- ✅ **Real-time Weather Data:** Instantly access current temperature, weather conditions (like "Mist" or "Partly cloudy"), wind speed, humidity, and sunrise times.
+- ✅ **Seamless City Search:** A user-friendly search bar provides live location suggestions as you type, making it easy to find any city worldwide.
+- ✅ **Dynamic UI & Icons:** The background gradient and weather icons dynamically change to reflect the current weather conditions, providing an immersive experience.
+- ✅ **Daily Forecast:** See a summary of the upcoming days with temperatures and weather icons at a glance.
+- ✅ **Persistent Last Location:** Remembers and automatically loads the weather for your last searched city using AsyncStorage for a seamless user experience.
+- ✅ **Built with Modern Practices:** Crafted with TypeScript for type safety.
 
-```sh
-# Using npm
-npm start
+---
 
-# OR using Yarn
-yarn start
+## 📸 Screenshots
+
+<div align="center">
+  
+**Home Screen** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **Search Active**
+
+<img src="https://github.com/user-attachments/assets/66e52bfc-1e83-40a1-9b60-b38e2a047df7" alt="Home Screen" width="250" style="margin: 0 20px;" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://github.com/user-attachments/assets/8931bf87-dd0e-47ee-af1e-5cb0bdd4a916" alt="Search Active" width="250" style="margin: 0 20px;" />
+
+<br><br>
+
+**Search Results** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **Updated Location**
+
+<img src="https://github.com/user-attachments/assets/22390a65-a1c9-4605-8a7f-cdcb7d493f75" alt="Search Results" width="250" style="margin: 0 20px;" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://github.com/user-attachments/assets/d11234ad-037f-4fa5-8ce1-a2f30bb508a9" alt="Updated Location" width="250" style="margin: 0 20px;" />
+
+</div>
+
+---
+
+## 🛠️ Tech Stack & Architecture
+
+- ⚛️ **React Native (TypeScript):** For building a robust, cross-platform mobile application.
+- 🎨 **NativeWind:** Powers the UI with the speed and convenience of TailwindCSS, allowing for rapid, utility-first styling directly in components.
+- 🌐 **OpenWeather API:** The source of all real-time weather and forecast data.
+- 💾 **AsyncStorage:** Used for light, persistent, on-device storage to cache the user's last searched location.
+
+### 📂 Project Structure
+
+The project is organized with a clear separation of concerns to ensure maintainability and scalability.
+
+```
+Weather-App/
+├── src/
+│   ├── api/           # Houses all logic for fetching data from OpenWeather API.
+│   ├── components/    # Reusable UI components (e.g., SearchBar, Forecast Cards).
+│   ├── constants/     # App-wide constants, including API keys and image assets.
+│   ├── screens/       # Main application screens (e.g., HomeScreen).
+│   ├── utils/         # Utility functions, including AsyncStorage helpers.
+│   └── App.tsx        # The main entry point of the application.
+├── assets/            # Static assets like icons and images.
+├── package.json
+└── README.md
 ```
 
-## Step 2: Build and run your app
+---
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
+## 🚀 Getting Started
 
-### Android
+Follow these steps to get the app running on your local machine.
 
-```sh
-# Using npm
-npm run android
+### **1. Clone the Repository**
 
-# OR using Yarn
-yarn android
+```bash
+git clone https://github.com/your-username/Weather-App.git
+cd Weather-App
 ```
 
-### iOS
+### **2. Install Dependencies**
 
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
-
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
-
-```sh
-bundle install
+```bash
+npm install
+# or
+yarn install
 ```
 
-Then, and every time you update your native dependencies, run:
+### **3. Add Your API Key**
 
-```sh
-bundle exec pod install
+**Important:** This app requires an API key from OpenWeather to function.
+
+1. Go to [OpenWeather](https://openweathermap.org/) and create a free account to get your API key.
+2. Open the file `src/constants/constants.ts` and replace the placeholder with your key:
+
+```ts
+// src/constants/constants.ts
+export const API_KEY = "YOUR_API_KEY_HERE";
 ```
 
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
+### **4. Run the App**
 
-```sh
-# Using npm
-npm run ios
+```bash
+# To run on Android
+npx react-native run-android
 
-# OR using Yarn
-yarn ios
+# To run on iOS
+npx react-native run-ios
+
+# If you are set up with Expo
+npx expo start
 ```
 
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
+---
 
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
+## 🔮 Future Enhancements
 
-## Step 3: Modify your app
+This project has a solid foundation. Future improvements could include:
 
-Now that you have successfully run the app, let's make changes!
+- 🌍 **Automatic Location Detection:** Use device GPS to show weather for the user's current location on startup.
+- 🗓️ **Detailed 7-Day Forecast:** Create a new screen to show more detailed information for the weekly forecast.
+- 🎨 **Theme Toggle:** Implement a Dark Mode / Light Mode switch.
+- 🔔 **Weather Alerts:** Integrate push notifications for severe weather alerts.
 
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
+---
 
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
+## 🤝 Contributing
 
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
+Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/your-username/Weather-App/issues).
 
-## Congratulations! :tada:
+1. Fork the project.
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`).
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`).
+4. Push to the branch (`git push origin feature/AmazingFeature`).
+5. Open a Pull Request.
 
-You've successfully run and modified your React Native App. :partying_face:
+---
 
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+⭐ **If you found this project useful, please consider giving it a star!** ⭐
