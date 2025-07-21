@@ -11,12 +11,12 @@ A sleek and modern **React Native Weather App** that displays real-time weather 
 
 ## ✨ Features
 
-- ✅ **Real-time Weather Data:** Instantly access current temperature, weather conditions (like "Mist" or "Partly cloudy"), wind speed, humidity, and sunrise times.
-- ✅ **Seamless City Search:** A user-friendly search bar provides live location suggestions as you type, making it easy to find any city worldwide.
-- ✅ **Dynamic UI & Icons:** The background gradient and weather icons dynamically change to reflect the current weather conditions, providing an immersive experience.
-- ✅ **Daily Forecast:** See a summary of the upcoming days with temperatures and weather icons at a glance.
-- ✅ **Persistent Last Location:** Remembers and automatically loads the weather for your last searched city using AsyncStorage for a seamless user experience.
-- ✅ **Built with Modern Practices:** Crafted with TypeScript for type safety.
+- **Real-time Weather Data:** Instantly access current temperature, weather conditions (like "Mist" or "Partly cloudy"), wind speed, humidity, and sunrise times.
+- **Seamless City Search:** A user-friendly search bar provides live location suggestions as you type, making it easy to find any city worldwide.
+- **Dynamic UI & Icons:** The background gradient and weather icons dynamically change to reflect the current weather conditions, providing an immersive experience.
+- **Daily Forecast:** See a summary of the upcoming days with temperatures and weather icons at a glance.
+- **Persistent Last Location:** Remembers and automatically loads the weather for your last searched city using AsyncStorage for a seamless user experience.
+- **Built with Modern Practices:** Crafted with TypeScript for type safety.
 
 ---
 
@@ -40,10 +40,10 @@ A sleek and modern **React Native Weather App** that displays real-time weather 
 
 ## 🛠️ Tech Stack & Architecture
 
-- ⚛️ **React Native (TypeScript):** For building a robust, cross-platform mobile application.
-- 🎨 **NativeWind:** Powers the UI with the speed and convenience of TailwindCSS, allowing for rapid, utility-first styling directly in components.
-- 🌐 **OpenWeather API:** The source of all real-time weather and forecast data.
-- 💾 **AsyncStorage:** Used for light, persistent, on-device storage to cache the user's last searched location.
+- **React Native (TypeScript):** For building a robust, cross-platform mobile application.
+- **NativeWind:** Powers the UI with the speed and convenience of TailwindCSS, allowing for rapid, utility-first styling directly in components.
+- **OpenWeather API:** The source of all real-time weather and forecast data.
+- **AsyncStorage:** Used for light, persistent, on-device storage to cache the user's last searched location.
 
 ### 📂 Project Structure
 
@@ -115,10 +115,10 @@ npx expo start
 
 This project has a solid foundation. Future improvements could include:
 
-- 🌍 **Automatic Location Detection:** Use device GPS to show weather for the user's current location on startup.
-- 🗓️ **Detailed 7-Day Forecast:** Create a new screen to show more detailed information for the weekly forecast.
-- 🎨 **Theme Toggle:** Implement a Dark Mode / Light Mode switch.
-- 🔔 **Weather Alerts:** Integrate push notifications for severe weather alerts.
+- **Automatic Location Detection:** Use device GPS to show weather for the user's current location on startup.
+- **Detailed 7-Day Forecast:** Create a new screen to show more detailed information for the weekly forecast.
+- **Theme Toggle:** Implement a Dark Mode / Light Mode switch.
+- **Weather Alerts:** Integrate push notifications for severe weather alerts.
 
 ---
 
